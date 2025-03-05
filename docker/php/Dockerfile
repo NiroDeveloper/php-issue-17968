@@ -4,7 +4,7 @@ RUN apk upgrade --update
 
 WORKDIR /var/www/html
 
-COPY --from=ing-artifactory7.eso.local/teamonline_coreservices_docker_virtual/composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # If you remove this command, it will work correctly.
 RUN apk add linux-headers \
