@@ -1,0 +1,10 @@
+﻿name: "php-bug"
+
+services:
+
+  php:
+    command: tail -f /dev/null
+    build:
+      context: ./php
+    volumes:
+      - ../laravel/:/var/www/html/
